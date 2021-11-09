@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$my-fonts:'Rubik',
+sans-serif;
+
+$big-heading:4rem;
+$medium-heading:2rem;
+$small-heading:1.25rem;
+$medium-margin:1.5rem;
+$small-margin:1rem;
+
+
+$border-color:rgb(197, 109, 26);
+$placeholder-color:rgba(255, 255, 255, .5);
+
+html {
+    font-family: $my-fonts;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url(/images/background-conteiner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.content {
+    background-image: url(/images/background-image5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+    width: 42vh;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .4), 0 2px 4px 0 rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+
+    .infos {
+        .first-div {
+            font-size: $big-heading;
+        }
+
+        .province,
+        .description {
+            text-transform: capitalize;
+            font-size: $medium-heading;
+        }
+
+        .description {
+            font-size: $small-heading;
+        }
+
+        .country {
+            text-transform: uppercase;
+            font-size: $medium-heading;
+        }
+
+        &>div:not(:last-child) {
+            margin-bottom: $medium-margin;
+        }
+    }
+
+    .my-input {
+        &>p {
+            font-size: $medium-heading;
+            margin-bottom: $small-margin;
+        }
+
+        input {
+            padding: 5px 5px 5px 0px;
+            background: transparent;
+            border: none;
+            outline: 0;
+            border-bottom: 2px solid $border-color;
+            color: #fff;
+            font-size: $small-heading;
+            text-align: center;
+
+            &::placeholder {
+                color: $placeholder-color;
+            }
+        }
+
+        span {
+            font-size: 14px;
+            color: $placeholder-color;
+        }
+    }
+}
